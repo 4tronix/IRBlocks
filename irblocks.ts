@@ -15,39 +15,39 @@ enum irState
 enum irKeys
 {
     //% block="any"
-    any=0
+    any=0,
     //% block="0"
     zero=152,
     //% block="1"
     one=162,
     //% block="2"
-    two=98
+    two=98,
     //% block="3"
-    two=226
+    two=226,
     //% block="4"
-    two=34
+    two=34,
     //% block="5"
-    two=2
+    two=2,
     //% block="6"
-    two=194
+    two=194,
     //% block="7"
-    two=224
+    two=224,
     //% block="8"
-    two=168
+    two=168,
     //% block="9"
-    two=144
+    two=144,
     //% block="star"
-    two=104
+    two=104,
     //% block="hash"
-    two=176
+    two=176,
     //% block="up"
-    two=24
+    two=24,
     //% block="down"
-    two=74
+    two=74,
     //% block="left"
-    two=16
+    two=16,
     //% block="right"
-    two=90
+    two=90,
     //% block="ok"
     two=56
 }
@@ -144,7 +144,7 @@ namespace irBlocks
       */
     //% weight=100
     //% blockId=onIrEvent
-    //% block="on 02 IR key%key"
+    //% block="on 03 IR key%key"
     export function onIREvent(event: irKeys, handler: Action)
     {
         initEvents();
