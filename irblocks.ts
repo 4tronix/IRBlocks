@@ -14,12 +14,42 @@ enum irState
   */
 enum irKeys
 {
+    //% block="any"
+    any=0
     //% block="0"
     zero=152,
     //% block="1"
     one=162,
     //% block="2"
     two=98
+    //% block="3"
+    two=226
+    //% block="4"
+    two=34
+    //% block="5"
+    two=2
+    //% block="6"
+    two=194
+    //% block="7"
+    two=224
+    //% block="8"
+    two=168
+    //% block="9"
+    two=144
+    //% block="star"
+    two=104
+    //% block="hash"
+    two=176
+    //% block="up"
+    two=24
+    //% block="down"
+    two=74
+    //% block="left"
+    two=16
+    //% block="right"
+    two=90
+    //% block="ok"
+    two=56
 }
 
 /**
@@ -35,6 +65,7 @@ namespace irBlocks
     let pulseCount = 0
     let final = 0
     let state = 0
+    let lastCode = 0
     let pulses: number[] = []
     let _initEvents = true
     const irEvent = 1995
@@ -95,9 +126,10 @@ namespace irBlocks
         state = 0
         final = pulseCount
         if(rxData[2] + rxData[3] == 255)
-            control.raiseEvent(irEvent, rxData[2])
+	    lastCode = rxData[2]
         else
-            control.raiseEvent(irEvent, 0)
+	    lastCode = 0
+        control.raiseEvent(irEvent, lastCode)
     }
 })
 
@@ -110,14 +142,24 @@ namespace irBlocks
     /**
       * Block for On Receive
       */
-    //% weight=10
-    //% blockId=onIREvent
-    //% block="on 01 IR key%key"
+    //% weight=100
+    //% blockId=onIrEvent
+    //% block="on 02 IR key%key"
     export function onIREvent(event: irKeys, handler: Action)
     {
         initEvents();
         control.onEvent(irEvent, <number>event, handler);
     }
 
+    /**
+      * Last IR Code received
+      */
+    //% weight=90
+    //% blockID=IRCode
+    //% block="IR code"
+    export function irCode(): number
+    {
+	return lastCode
+    }
 
 }
