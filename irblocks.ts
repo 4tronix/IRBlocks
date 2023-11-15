@@ -140,11 +140,11 @@ namespace irBlocks
 
 
     /**
-      * Block for On Receive
+      * Action on IR message received
       */
     //% weight=100
     //% blockId=onIrEvent
-    //% block="on 04 IR key%key"
+    //% block="on 05 IR key%key"
     export function onIREvent(event: irKeys, handler: Action)
     {
         initEvents();
@@ -152,14 +152,26 @@ namespace irBlocks
     }
 
     /**
+     * Check if IR key pressed
+     */
+    //% weight=90
+    //% blockId=IRKey
+    //% block="IR key%key|was pressed"
+    export function irKey(key: irKeys): boolean
+    {
+        return (lastCode == key)
+    }
+
+    /**
       * Last IR Code received
       */
-    //% weight=90
-    //% blockID=IRCode
+    //% weight=80
+    //% blockId=IRCode
     //% block="IR code"
     export function irCode(): number
     {
 	return lastCode
     }
+
 
 }
