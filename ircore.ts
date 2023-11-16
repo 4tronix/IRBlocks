@@ -35,14 +35,14 @@ namespace irCore
     }
 
 // Main receiver function
-    export function initEvents(): void
+    export function initEvents(irPin: DigitalPin): void
     {
         if (_initEvents)
         {
-	    pins.setPull(DigitalPin.P14, PinPullMode.PullUp)
-            pins.setEvents(DigitalPin.P14, PinEventType.Pulse);
+	    pins.setPull(irPin, PinPullMode.PullUp)
+            pins.setEvents(irPin, PinEventType.Pulse);
             _initEvents = false;
-	    pins.onPulsed(DigitalPin.P14, PulseValue.High, function ()
+	    pins.onPulsed(irPin, PulseValue.High, function ()
 	    {
 	        width = pins.pulseDuration()
 	        if(state==0 && !between(width, 4000, 5000))	// ignore anything but start bit if not inside a packet

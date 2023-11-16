@@ -57,10 +57,10 @@ namespace irBlocks
       */
     //% weight=100
     //% blockId=onIrEvent
-    //% block="on 10 IR key%key"
+    //% block="on 11 IR key%key"
     export function onIREvent(event: irKeys, handler: Action)
     {
-        irCore.initEvents()
+        irCore.initEvents(DigitalPin.P14)
         control.onEvent(irEvent, <number>event, handler)
     }
 
