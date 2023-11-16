@@ -1,6 +1,6 @@
 {
     "name": "IRBlocks",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "MakeCode extension for 4tronix IR Receiver",
     "license": "MIT",
     "dependencies": {
@@ -8,7 +8,8 @@
     },
     "files": [
         "README.md",
-        "irblocks.ts"
+        "irblocks.ts",
+	"ircore.ts"
     ],
     "testFiles": [
         "irtest.ts"
