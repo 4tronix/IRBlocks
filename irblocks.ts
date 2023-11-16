@@ -103,7 +103,7 @@ namespace irBlocks
 	            addBit(0)
 	        if(state==1 && between(width, 1500, 1800))	// a '1' bit
 	            addBit(1)
-	        if (pulseCount >= 32)	// 32 bits per packet, so we've done
+	        if (++pulseCount >= 32)	// 32 bits per packet, so we've done
 	        {
 	            state = 0
 	            if(rxData[2] + rxData[3] == 255)
@@ -123,7 +123,7 @@ namespace irBlocks
       */
     //% weight=100
     //% blockId=onIrEvent
-    //% block="on 06 IR key%key"
+    //% block="on 07 IR key%key"
     export function onIREvent(event: irKeys, handler: Action)
     {
         initEvents();
