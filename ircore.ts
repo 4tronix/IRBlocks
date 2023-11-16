@@ -29,7 +29,7 @@ namespace irCore
         }
     }
 
-    export function lastCode(): number
+    export function LastCode(): number
     {
 	return lastCode
     }
