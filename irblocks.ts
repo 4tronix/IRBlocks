@@ -57,11 +57,11 @@ namespace irBlocks
       */
     //% weight=100
     //% blockId=onIrEvent
-    //% block="on 08 IR key%key"
+    //% block="on 09 IR key%key"
     export function onIREvent(event: irKeys, handler: Action)
     {
-        irCode.initEvents();
-        control.onEvent(irEvent, <number>event, handler);
+        irCode.initEvents()
+        control.onEvent(irEvent, <number>event, handler)
     }
 
     /**
@@ -83,7 +83,7 @@ namespace irBlocks
     //% block="IR code"
     export function irCode(): number
     {
-	return irCode.lastCode
+	return irCode.lastCode()
     }
 
 

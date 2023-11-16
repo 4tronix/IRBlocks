@@ -13,7 +13,7 @@ namespace irCore
 
 // Helper Functions
 
-    function between(data: number, min: number, max: number) : boolean
+    function between(data: number, min: number, max: number): boolean
     {
         return (data >= min) && (data <= max)
     }
@@ -29,8 +29,13 @@ namespace irCore
         }
     }
 
+    export function lastCode(): number
+    {
+	return lastCode
+    }
+
 // Main receiver function
-    function initEvents(): void
+    export function initEvents(): void
     {
         if (_initEvents)
         {
