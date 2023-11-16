@@ -49,7 +49,6 @@ enum irKeys
 namespace irBlocks
 {
     const irEvent = 1995
-    let irPin: DigitalPin
 
 // Blocks
 
@@ -58,10 +57,10 @@ namespace irBlocks
       */
     //% weight=100
     //% blockId=onIrEvent
-    //% block="on 12 IR key%key"
-    export function onIREvent(event: irKeys, handler: Action)
+    //% block="on 13 IR pin%pin|key%key"
+    export function onIREvent(pin: DigitalPin, event: irKeys, handler: Action)
     {
-        irCore.initEvents(irPin)
+        irCore.initEvents(pin)
         control.onEvent(irEvent, <number>event, handler)
     }
 
@@ -86,18 +85,5 @@ namespace irBlocks
     {
 	return irCore.LastCode()
     }
-
-    /**
-      * Select pin to connect IR
-      * @param pin pin connected to IR receiver
-      */
-    //% blockId=selectPin
-    //% block="select IR pin%pin"
-    //% weight=70
-    export function selectPin(pin: DigitalPin)
-    {
-	irPin = pin
-    }
-
 
 }
