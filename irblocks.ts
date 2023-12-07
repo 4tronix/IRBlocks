@@ -71,7 +71,7 @@ enum IRBirNoAny
     Star=104,
     //% block="#"
     Hash=176,
-    //% block="up"
+    //% block="▲"
     Up=24,
     //% block="down"
     Down=74,
