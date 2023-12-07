@@ -69,7 +69,7 @@ enum irNoAny
     Nine=144,
     //% block="*"
     Star=104,
-    //% block="#"
+    //% block="hash"
     Hash=176,
     //% block="up"
     Up=24,
