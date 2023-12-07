@@ -73,11 +73,11 @@ enum IRBirNoAny
     Hash=176,
     //% block="▲"
     Up=24,
-    //% block="down"
+    //% block="▼"
     Down=74,
-    //% block="left"
+    //% block="◄"
     Left=16,
-    //% block="right"
+    //% block="►"
     Right=90,
     //% block="ok"
     Ok=56
