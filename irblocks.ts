@@ -67,13 +67,13 @@ enum irNoAny
     Eight=168,
     //% block="9"
     Nine=144,
-    //% block="star"
+    //% block="*"
     Star=104,
-    //% block="hash"
+    //% block="#"
     Hash=176,
-    //% block="up"
+    //% block="▲"
     Up=24,
-    //% block="down"
+    //% block="▼"
     Down=74,
     //% block="left"
     Left=16,
