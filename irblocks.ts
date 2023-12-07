@@ -71,9 +71,9 @@ enum irNoAny
     Star=104,
     //% block="#"
     Hash=176,
-    //% block="▲"
+    //% block="up"
     Up=24,
-    //% block="▼"
+    //% block="down"
     Down=74,
     //% block="left"
     Left=16,
