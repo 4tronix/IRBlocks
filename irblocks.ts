@@ -2,7 +2,7 @@
 /**
   * Key code translations
   */
-enum irKeys
+enum IRBirKeys
 {
     //% block="any"
     Any=0,
@@ -45,7 +45,7 @@ enum irKeys
 /**
   * IR Key code translations without the Any code
   */
-enum irNoAny
+enum IRBirNoAny
 {
     //% block="0"
     Zero=152,
@@ -99,7 +99,7 @@ namespace irBlocks
     //% weight=100
     //% blockId=onIrEvent
     //% block="on IR pin%pin|key%key"
-    export function onIREvent(pin: DigitalPin, event: irKeys, handler: Action)
+    export function onIREvent(pin: DigitalPin, event: IRBirKeys, handler: Action)
     {
         irCore.initEvents(pin)
         control.onEvent(irEvent, <number>event, handler)
@@ -111,7 +111,7 @@ namespace irBlocks
     //% weight=90
     //% blockId=IRKey
     //% block="IR key%key|was pressed"
-    export function irKey(key: irKeys): boolean
+    export function irKey(key: IRBirKeys): boolean
     {
         return (irCore.LastCode() == key)
     }
@@ -133,7 +133,7 @@ namespace irBlocks
     //% weight=70
     //% blockId=IRKeyCode
     //% block="IR Key%key"
-    export function irKeyCode(key: irNoAny): number
+    export function irKeyCode(key: IRBirNoAny): number
     {
 	return key
     }
