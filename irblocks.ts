@@ -67,7 +67,7 @@ enum IRBirNoAny
     Eight=168,
     //% block="9"
     Nine=144,
-    //% block="star"
+    //% block="*"
     Star=104,
     //% block="hash"
     Hash=176,
