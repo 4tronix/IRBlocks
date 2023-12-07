@@ -122,7 +122,7 @@ namespace irBlocks
       */
     //% weight=80
     //% blockId=IRCode
-    //% block="Last IR code"
+    //% block="last IR code"
     export function irCode(): number
     {
 	return irCore.LastCode()
