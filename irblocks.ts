@@ -26,19 +26,19 @@ enum IRBirKeys
     Eight=168,
     //% block="9"
     Nine=144,
-    //% block="star"
+    //% block="*"
     Star=104,
-    //% block="hash"
+    //% block="#"
     Hash=176,
-    //% block="up"
+    //% block="▲"
     Up=24,
-    //% block="down"
+    //% block="▼"
     Down=74,
-    //% block="left"
+    //% block="◄"
     Left=16,
-    //% block="right"
+    //% block="►"
     Right=90,
-    //% block="ok"
+    //% block="OK"
     Ok=56
 }
 
@@ -79,7 +79,7 @@ enum IRBirNoAny
     Left=16,
     //% block="►"
     Right=90,
-    //% block="ok"
+    //% block="OK"
     Ok=56
 }
 
