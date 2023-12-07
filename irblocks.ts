@@ -99,7 +99,7 @@ namespace irBlocks
       */
     //% weight=100
     //% blockId=onIrEvent
-    //% block="on 14 IR pin%pin|key%key"
+    //% block="on IR pin%pin|key%key"
     export function onIREvent(pin: DigitalPin, event: IRBirKeys, handler: Action)
     {
         irCore.initEvents(pin)
@@ -122,7 +122,7 @@ namespace irBlocks
       */
     //% weight=80
     //% blockId=IRCode
-    //% block="IR code"
+    //% block="Last IR code"
     export function irCode(): number
     {
 	return irCore.LastCode()
