@@ -71,13 +71,13 @@ enum IRBirNoAny
     Star=104,
     //% block="#"
     Hash=176,
-    //% block="▲"
+    //% block="↑"
     Up=24,
-    //% block="▼"
+    //% block="↓"
     Down=74,
-    //% block="◄"
+    //% block="←"
     Left=16,
-    //% block="►"
+    //% block="→"
     Right=90,
     //% block="OK"
     Ok=56
